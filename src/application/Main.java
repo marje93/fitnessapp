@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 import java.time.LocalDate;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,8 +19,11 @@ import javafx.scene.layout.AnchorPane;
 
 public class Main extends Application {
 	@FXML
-	Button btn_skritt, btn_profil, btn_kart;
+	Button btn_skritt, btn_profil, btn_kart, btn_trophy;
 	Scene scn_profil, scn_skritt, scn_kart;
+	boolean anonym;
+	@FXML
+	CheckBox anonym_checkbox;
 	Stage window;
 	public static void main(String[] args) {
 		launch(args);
@@ -58,9 +62,17 @@ public class Main extends Application {
 			stage=(Stage) btn_kart.getScene().getWindow();
 			root= FXMLLoader.load(getClass().getResource("FXMLkart.fxml"));
 		}
+		else if(event.getSource()==btn_trophy){
+			stage= (Stage) btn_trophy.getScene().getWindow();
+			root= FXMLLoader.load(getClass().getResource("FXMLtrofeer.fxml"));
+		}
 		else{
+			
 			stage= (Stage) btn_profil.getScene().getWindow();
 			root= FXMLLoader.load(getClass().getResource("FXMLprofil.fxml"));
+			//anonym_checkbox= (CheckBox) root.lookup("#anonym_checkbox");
+			//anonym_checkbox.setSelected(anonym);
+	
 		}
 		Scene scene = new Scene(root);
 		stage.setScene(scene);
@@ -68,6 +80,10 @@ public class Main extends Application {
 		System.out.println("ButtonClicked called, event: " + event.toString());
 	}
 
+	@FXML
+	public void anonymToggle(ActionEvent event){
+		anonym=!anonym;
+	}
 
 	
 

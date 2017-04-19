@@ -16,7 +16,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dee3e8" height="166.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="414.0" />
       <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dee3e8" height="121.0" layoutX="4.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="406.0" />
       <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dee3e8" height="377.0" layoutX="1.0" layoutY="295.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="414.0" />
-      <Text layoutX="167.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KART">
+      <Text layoutX="147.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TROFEER">
          <font>
             <Font size="30.0" />
          </font>
