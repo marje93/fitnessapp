@@ -17,34 +17,32 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dee3e8" height="69.0" layoutX="-12.0" layoutY="672.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="428.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dee3e8" height="166.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="414.0" />
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dee3e8" height="122.0" layoutX="4.0" layoutY="172.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="406.0" />
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dee3e8" height="364.0" layoutX="1.0" layoutY="299.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="414.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dee3e8" height="355.0" layoutX="4.0" layoutY="172.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="406.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dee3e8" height="129.0" layoutX="1.0" layoutY="534.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="414.0" />
       <Ellipse fill="DODGERBLUE" layoutX="82.0" layoutY="81.0" radiusX="68.0" radiusY="61.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="214.0" fitWidth="355.0" layoutX="31.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/grafkonkurranse_alle.jpg" />
+         </image>
+      </ImageView>
       <Text layoutX="31.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ANNTALL SKRITT I DAG: " wrappingWidth="275.9755859375">
          <font>
             <Font size="25.0" />
          </font>
       </Text>
-      <Text layoutX="23.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRONDHEIM - NORDPOLEN" wrappingWidth="378.39013671875">
+      <Text layoutX="26.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRONDHEIM - NORDPOLEN" wrappingWidth="378.39013671875">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <Text layoutX="161.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18.03-25.05">
+      <Text layoutX="164.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18.03-25.05">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="144.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X DAGER IGJEN">
+      <Text layoutX="147.0" layoutY="657.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X DAGER IGJEN">
          <font>
             <Font size="20.0" />
-         </font>
-      </Text>
-      <Ellipse fill="DODGERBLUE" layoutX="212.0" layoutY="546.0" radiusX="104.0" radiusY="100.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text layoutX="181.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTALT ANTALL SKRITT" textAlignment="CENTER" wrappingWidth="61.6982421875" />
-      <Text layoutX="197.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
-         <font>
-            <Font size="52.0" />
          </font>
       </Text>
       <Text layoutX="169.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DITT NAVN">
@@ -53,9 +51,9 @@
          </font>
       </Text>
       <CheckBox fx:id="anonym_checkbox" layoutX="177.0" layoutY="83.0" mnemonicParsing="false" onAction="#anonymToggle" text="Vær anonym?" />
-      <Button fx:id="btn_semer_skritt" layoutX="317.0" layoutY="218.0" mnemonicParsing="false" onAction="#ButtonClicked" prefHeight="85.0" prefWidth="120.0" scaleX="0.25" scaleY="0.25">
+      <Button fx:id="btn_semindre_skritt" layoutX="322.0" layoutY="442.0" mnemonicParsing="false" onAction="#ButtonClicked" prefHeight="85.0" prefWidth="120.0" scaleX="0.25" scaleY="0.25">
          <graphic>
-            <Polygon fill="#9ea5ab" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+            <Polygon fill="#9ea5ab" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
               <points>
                 <Double fx:value="-50.0" />
                 <Double fx:value="40.0" />
@@ -105,19 +103,5 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <Button fx:id="btn_semer_konk" layoutX="317.0" layoutY="588.0" mnemonicParsing="false" onAction="#ButtonClicked" prefHeight="69.0" prefWidth="83.0" scaleX="0.25" scaleY="0.25">
-         <graphic>
-            <Polygon fill="#9ea5ab" onDragDetected="#ButtonClicked" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
-               <points>
-                  <Double fx:value="-50.0" />
-                  <Double fx:value="40.0" />
-                  <Double fx:value="50.0" />
-                  <Double fx:value="40.0" />
-                  <Double fx:value="0.0" />
-                  <Double fx:value="-60.0" />
-               </points>
-            </Polygon>
-         </graphic>
-      </Button>
    </children>
 </AnchorPane>

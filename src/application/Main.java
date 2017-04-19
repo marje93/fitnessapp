@@ -19,11 +19,13 @@ import javafx.scene.layout.AnchorPane;
 
 public class Main extends Application {
 	@FXML
-	Button btn_skritt, btn_profil, btn_kart, btn_trophy;
+	Button btn_skritt, btn_profil, btn_kart, btn_trophy, btn_semer_skritt, btn_semer_konk;
 	Scene scn_profil, scn_skritt, scn_kart;
 	boolean anonym;
 	@FXML
 	CheckBox anonym_checkbox;
+	@FXML
+	TextField antall_skritt_textfield;
 	Stage window;
 	public static void main(String[] args) {
 		launch(args);
@@ -34,13 +36,10 @@ public class Main extends Application {
 	public void start(Stage primaryStage){
 		try {
 			Parent profil_fxml =FXMLLoader.load(getClass().getResource("FXMLprofil.fxml"));
-			//Parent skritt_fxml =FXMLLoader.load(getClass().getResource("FXMLskritt.fxml"));
-		//	Parent kart_fxml =FXMLLoader.load(getClass().getResource("FXMLskritt.fxml"));
 			window= primaryStage;
 			window.setTitle("Fitnessapp");
 			
 			scn_profil = new Scene(profil_fxml,414,736);
-	//		scn_skritt = new Scene(skritt_fxml,414,736);
 			
 			window.setScene(scn_profil);
 			window.show();
@@ -66,6 +65,14 @@ public class Main extends Application {
 			stage= (Stage) btn_trophy.getScene().getWindow();
 			root= FXMLLoader.load(getClass().getResource("FXMLtrofeer.fxml"));
 		}
+		else if(event.getSource()==btn_semer_skritt){
+			stage= (Stage) btn_semer_skritt.getScene().getWindow();
+			root= FXMLLoader.load(getClass().getResource("FXMLprofil_skritt_semer.fxml"));
+		}
+		else if(event.getSource()==btn_semer_konk){
+			stage= (Stage) btn_semer_konk.getScene().getWindow();
+			root= FXMLLoader.load(getClass().getResource("FXMLprofil_konk_semer.fxml"));
+		}
 		else{
 			
 			stage= (Stage) btn_profil.getScene().getWindow();
@@ -84,9 +91,17 @@ public class Main extends Application {
 	public void anonymToggle(ActionEvent event){
 		anonym=!anonym;
 	}
+	
+	@FXML
+	public void stepRegistration(ActionEvent event){
+		System.out.println("stepRegistration called, skritt= " + antall_skritt_textfield.getText());
+	}
 
 	
 
+	
+	
+	
 	private void attachValidation(TextField input, String pattern) {
 		input.focusedProperty().addListener((observable, oldValue, newValue) -> {
 			String text = input.getText();
