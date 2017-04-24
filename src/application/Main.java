@@ -80,21 +80,26 @@ public class Main extends Application {
 		else if(event.getSource()==btn_semer_skritt){
 			stage= (Stage) btn_semer_skritt.getScene().getWindow();
 			root= FXMLLoader.load(getClass().getResource("FXMLprofil_skritt_semer.fxml"));
+			anonym_checkbox = (CheckBox) root.getChildrenUnmodifiable().get(11);
+			anonym_checkbox.setSelected(anonym);
 		}
 		else if(event.getSource()==btn_semer_konk_nord){
 			stage= (Stage) btn_semer_konk_nord.getScene().getWindow();
 			root= FXMLLoader.load(getClass().getResource("FXMLprofil_konk_semer_nord.fxml"));
+			anonym_checkbox = (CheckBox) root.getChildrenUnmodifiable().get(8);
+			anonym_checkbox.setSelected(anonym);
 		}
 		else if(event.getSource()==btn_semer_konk_oslo){
 			stage= (Stage) btn_semer_konk_oslo.getScene().getWindow();
 			root= FXMLLoader.load(getClass().getResource("FXMLprofil_konk_semer_oslo.fxml"));
+			anonym_checkbox = (CheckBox) root.getChildrenUnmodifiable().get(8);
+			anonym_checkbox.setSelected(anonym);
 		}
 		else if(event.getSource()==btn_pameld_trd_oslo){
 			stage=(Stage)btn_pameld_trd_oslo.getScene().getWindow();
 			root= FXMLLoader.load(getClass().getResource("FXMLkart_alle_oslo.fxml"));
 			pameldt_trd_oslo=true;
-			
-		}
+					}
 		else if(event.getSource()==btn_pameld_trd_nord){
 			stage=(Stage)btn_pameld_trd_nord.getScene().getWindow();
 			root= FXMLLoader.load(getClass().getResource("FXMLkart_alle_nord.fxml"));
@@ -105,22 +110,28 @@ public class Main extends Application {
 			root=FXMLLoader.load(getClass().getResource("FXMLprofil_zero.fxml"));
 			pameldt_trd_nord=false;
 			pameldt_trd_oslo=false;
+			anonym_checkbox = (CheckBox) root.getChildrenUnmodifiable().get(8);
+			anonym_checkbox.setSelected(anonym);
 		}
 		else{
 			if(pameldt_trd_nord==true){
 				stage=(Stage)btn_profil.getScene().getWindow();
 				root= FXMLLoader.load(getClass().getResource("FXMLprofil_trd_nord.fxml"));
+				anonym_checkbox = (CheckBox) root.getChildrenUnmodifiable().get(13);
+				anonym_checkbox.setSelected(anonym);
 			}
 			else if(pameldt_trd_oslo==true){
 				stage=(Stage)btn_profil.getScene().getWindow();
-				root= FXMLLoader.load(getClass().getResource("FXMLprofil_trd_oslo.fxml"));	
+				root= FXMLLoader.load(getClass().getResource("FXMLprofil_trd_oslo.fxml"));
+				anonym_checkbox = (CheckBox) root.getChildrenUnmodifiable().get(13);
+				anonym_checkbox.setSelected(anonym);
 			}
 			else{
 			stage= (Stage) btn_profil.getScene().getWindow();
 			root= FXMLLoader.load(getClass().getResource("FXMLprofil_zero.fxml"));
-	//		anonym_checkbox= (CheckBox) root.lookup("#anonym_checkbox");
-			//anonym_checkbox = (CheckBox) root.getChildrenUnmodifiable().get(13);
-//			anonym_checkbox.setSelected(anonym);
+//			anonym_checkbox= (CheckBox) root.lookup("#anonym_checkbox");
+			anonym_checkbox = (CheckBox) root.getChildrenUnmodifiable().get(8);
+			anonym_checkbox.setSelected(anonym);
 	
 			}}
 		Scene scene = new Scene(root);
