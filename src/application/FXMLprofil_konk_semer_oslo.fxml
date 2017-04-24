@@ -17,34 +17,11 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dee3e8" height="69.0" layoutX="-12.0" layoutY="672.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="428.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dee3e8" height="166.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="414.0" />
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dee3e8" height="122.0" layoutX="4.0" layoutY="172.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="406.0" />
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dee3e8" height="364.0" layoutX="1.0" layoutY="299.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="414.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dee3e8" height="489.0" layoutY="174.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="414.0" />
       <Ellipse fill="DODGERBLUE" layoutX="82.0" layoutY="81.0" radiusX="68.0" radiusY="61.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text layoutX="31.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ANNTALL SKRITT I DAG: " wrappingWidth="275.9755859375">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Text>
-      <Text layoutX="23.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRONDHEIM - NORDPOLEN" wrappingWidth="378.39013671875">
+      <Text layoutX="22.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRONDHEIM -NORDPOLEN" textAlignment="CENTER" wrappingWidth="378.39013671875">
          <font>
             <Font size="30.0" />
-         </font>
-      </Text>
-      <Text layoutX="161.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18.03-25.05">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="144.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X DAGER IGJEN">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Ellipse fill="DODGERBLUE" layoutX="212.0" layoutY="546.0" radiusX="104.0" radiusY="100.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text layoutX="181.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTALT ANTALL SKRITT" textAlignment="CENTER" wrappingWidth="61.6982421875" />
-      <Text layoutX="197.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
-         <font>
-            <Font size="52.0" />
          </font>
       </Text>
       <Text layoutX="169.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DITT NAVN">
@@ -52,21 +29,17 @@
             <Font size="28.0" />
          </font>
       </Text>
+      <Text layoutX="173.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="skritt unna målet" wrappingWidth="378.39013671875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="265.0" fitWidth="428.0" layoutX="10.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/grafdaligmål.jpg" />
+         </image>
+      </ImageView>
       <CheckBox fx:id="anonym_checkbox" layoutX="177.0" layoutY="83.0" mnemonicParsing="false" onAction="#anonymToggle" text="Vær anonym?" />
-      <Button fx:id="btn_semer_skritt" layoutX="317.0" layoutY="218.0" mnemonicParsing="false" onAction="#ButtonClicked" prefHeight="85.0" prefWidth="120.0" scaleX="0.25" scaleY="0.25">
-         <graphic>
-            <Polygon fill="#9ea5ab" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
-              <points>
-                <Double fx:value="-50.0" />
-                <Double fx:value="40.0" />
-                <Double fx:value="50.0" />
-                <Double fx:value="40.0" />
-                <Double fx:value="0.0" />
-                <Double fx:value="-60.0" />
-              </points>
-            </Polygon>
-         </graphic>
-      </Button>
       <Button fx:id="btn_skritt" layoutX="39.0" layoutY="677.0" mnemonicParsing="false" onAction="#ButtonClicked" prefHeight="60.0" prefWidth="62.0">
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
@@ -100,14 +73,9 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label fx:id="antall_skritt_profil" layoutX="338.0" layoutY="197.0" text="0">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Label>
-      <Button fx:id="btn_semer_konk_nord" layoutX="317.0" layoutY="588.0" mnemonicParsing="false" onAction="#ButtonClicked" prefHeight="69.0" prefWidth="83.0" scaleX="0.25" scaleY="0.25">
+      <Button fx:id="btn_semindre_konk" layoutX="317.0" layoutY="588.0" mnemonicParsing="false" onAction="#ButtonClicked" prefHeight="69.0" prefWidth="83.0" scaleX="0.25" scaleY="0.25">
          <graphic>
-            <Polygon fill="#9ea5ab" onDragDetected="#ButtonClicked" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+            <Polygon fx:id="btn_semer_konkurranse" fill="#9ea5ab" onDragDetected="#ButtonClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
                <points>
                   <Double fx:value="-50.0" />
                   <Double fx:value="40.0" />
@@ -119,10 +87,15 @@
             </Polygon>
          </graphic>
       </Button>
-      <Button fx:id="meldav_konk" layoutX="20.0" layoutY="619.0" mnemonicParsing="false" onAction="#ButtonClicked" prefHeight="30.0" prefWidth="73.0" text="MELD AV" textFill="#0000008c">
+      <Label layoutX="112.0" layoutY="253.0" prefHeight="40.0" prefWidth="65.0" text="10000">
          <font>
-            <Font name="System Bold" size="10.0" />
+            <Font size="20.0" />
          </font>
-      </Button>
+      </Label>
+      <Text layoutX="30.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gjennomsnittlig skritt: 10 000 per dag" wrappingWidth="378.39013671875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
