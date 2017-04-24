@@ -19,7 +19,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class Main extends Application {
 	@FXML
-	Button btn_skritt, btn_profil, btn_kart, btn_trophy, btn_semer_skritt, btn_semer_konk, btn_pameld_trd_oslo, btn_pameld_trd_nord, btn_meldav_konk;
+	Button btn_skritt, btn_profil, btn_kart, btn_trophy, btn_semer_skritt, btn_semer_konk_nord, btn_semer_konk_oslo, btn_pameld_trd_oslo, btn_pameld_trd_nord, btn_meldav_konk;
 	Scene scn_profil, scn_skritt, scn_kart;
 	static boolean anonym;
 	static int skritt = 0;
@@ -81,9 +81,13 @@ public class Main extends Application {
 			stage= (Stage) btn_semer_skritt.getScene().getWindow();
 			root= FXMLLoader.load(getClass().getResource("FXMLprofil_skritt_semer.fxml"));
 		}
-		else if(event.getSource()==btn_semer_konk){
-			stage= (Stage) btn_semer_konk.getScene().getWindow();
-			root= FXMLLoader.load(getClass().getResource("FXMLprofil_konk_semer.fxml"));
+		else if(event.getSource()==btn_semer_konk_nord){
+			stage= (Stage) btn_semer_konk_nord.getScene().getWindow();
+			root= FXMLLoader.load(getClass().getResource("FXMLprofil_konk_semer_nord.fxml"));
+		}
+		else if(event.getSource()==btn_semer_konk_oslo){
+			stage= (Stage) btn_semer_konk_oslo.getScene().getWindow();
+			root= FXMLLoader.load(getClass().getResource("FXMLprofil_konk_semer_oslo.fxml"));
 		}
 		else if(event.getSource()==btn_pameld_trd_oslo){
 			stage=(Stage)btn_pameld_trd_oslo.getScene().getWindow();

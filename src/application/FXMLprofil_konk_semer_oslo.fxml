@@ -19,7 +19,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dee3e8" height="166.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="414.0" />
       <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dee3e8" height="489.0" layoutY="174.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="414.0" />
       <Ellipse fill="DODGERBLUE" layoutX="82.0" layoutY="81.0" radiusX="68.0" radiusY="61.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text layoutX="22.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRONDHEIM -NORDPOLEN" textAlignment="CENTER" wrappingWidth="378.39013671875">
+      <Text layoutX="22.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRONDHEIM - OSLO" textAlignment="CENTER" wrappingWidth="378.39013671875">
          <font>
             <Font size="30.0" />
          </font>
